@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import "./LoginForm.css";
 
 
@@ -85,9 +85,9 @@ function toCheck(){
             	<input type="submit" class="btn-log" value="Login" />
 
 
-{/* Add a simple button(not bootstrap's one) here by which I can invoke toCheck function above like */}
+{/* Add a simple button(not bootstrap's one) here by which I can invoke toCheck function above like }*/
 	
-<button onClick={toCheck}>Demo</button>
+/*<button onClick={toCheck}>Demo</button>
 
 
             </form>
@@ -95,4 +95,44 @@ function toCheck(){
     </div>
     </div>
   );
+}*/
+
+
+
+import React from 'react'
+
+function LoginForm() {
+	return (
+		<div>
+
+		<form>
+
+		<p>
+		  <input type= "radio" />
+			<label>Student</label>
+			<input type= "radio" />
+			<label>Teacher</label>
+			<input type= "radio" />
+			<label>Admin</label>
+		</p>
+		
+		  
+		 <p>
+		 <label>Email:</label>
+			<input type= "email" />
+		 </p> 
+			
+			
+			<label>Password:</label>
+			<input type= "password" />
+			<p>
+			<button>Login</button>
+			</p>
+			
+		</form>
+			
+		</div>
+	)
 }
+
+export default LoginForm;
