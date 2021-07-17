@@ -99,23 +99,47 @@ function toCheck(){
 
 
 
-import React from 'react'
 
-function LoginForm() {
-	return (
-		<div>
 
-		<form>
+import {useState} from "react";
 
-		<p>
-		  <input type= "radio" />
+export default function LoginForm() {
+  const [form,setForm] = useState("none")
+  const [header, setHeader] = useState("")
+	
+ 
+
+  function handleChange(event) {
+    setForm("block");
+    console.log()
+    if (event.target.value === "Student") {
+      setHeader("Student")
+    }
+    else if (event.target.value === "Teacher") {
+      setHeader("Teacher")
+    }
+    else if (event.target.value === "Admin") {
+      setHeader("Admin")
+    }
+      
+  }
+
+  return (
+    <div>
+
+    <p>
+		  <input type= "radio" value = "Student" onChange = {handleChange}/>
 			<label>Student</label>
-			<input type= "radio" />
+			<input type= "radio" value = "Teacher" onChange = {handleChange} />
 			<label>Teacher</label>
-			<input type= "radio" />
+			<input type= "radio" value = "Admin" onChange = {handleChange} />
 			<label>Admin</label>
 		</p>
+
+		<form style = {{display: {form}}} >
 		
+
+    <h1>{header}</h1>
 		  
 		 <p>
 		 <label>Email:</label>
@@ -132,7 +156,5 @@ function LoginForm() {
 		</form>
 			
 		</div>
-	)
+  );
 }
-
-export default LoginForm;
