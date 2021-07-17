@@ -130,11 +130,11 @@ export default function LoginForm() {
     <div>
 
     <p>
-		  <input type= "radio" value = "Student" onChange = {handleChange}/>
+		  <input type= "radio" name="toogle_me" value = "Student" onChange = {handleChange}/>
 			<label>Student</label>
-			<input type= "radio" value = "Teacher" onChange = {handleChange} />
+			<input type= "radio" name="toogle_me" value = "Teacher" onChange = {handleChange} />
 			<label>Teacher</label>
-			<input type= "radio" value = "Admin" onChange = {handleChange} />
+			<input type= "radio" name="toogle_me" value = "Admin" onChange = {handleChange} />
 			<label>Admin</label>
 		</p>
 
