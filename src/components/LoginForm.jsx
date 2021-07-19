@@ -1,9 +1,11 @@
+
+i
 import React from 'react';
 import "./LoginForm.css";
 
 
 
-export default function LoginForm() {
+function LoginForm() {
 
 
 	
@@ -98,3 +100,6 @@ function toCheck(){
     </div>
   );
 }
+
+
+export default LoginForm;
