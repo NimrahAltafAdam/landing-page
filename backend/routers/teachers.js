@@ -9,27 +9,40 @@ let Teacher=require("../models/teachersmodel.js");
 
 router.route('/').get((req,res)=>{
   Teacher.find()
-  .then(tech=>res.json(tech))
+  .then(techdata=>res.json(techdata))
   .catch(err=>res.status(400).json('Error: ' + err))
  
 
 })
 
+
+router.route('/:id').get((req,res)=>{
+  Teacher.findById(req.params.id)
+  .then(techdata=>res.json(techdata))
+  .catch(err=>res.status(400).json('Error: ' + err))
+});
+
+
+
+
+
 router.route('/add').post((req,res)=>{
  
 
-    const teachername=req.body.teachername;
-    const temail=req.body.temail;
-    const tpassword=req.body.tpassword;
-    const tsubjects=Number(req.body.tsubjects);
-
-
+    const teachname=req.body.teachname;
+    const teachemail=req.body.teachemail;
+    const teachpassword=req.body.teachpassword;
+    const teachsubjects=Number(req.body.teachsubjects);
+       const status=req.body.status;
+       
 
     const newTech=new Teacher({
-         teachername,
-         temail,
-         tpassword,
-         tsubjects,
+        
+     teachname,
+     teachemail,
+     teachpassword,
+     teachsubjects,
+    status
 
     })
    

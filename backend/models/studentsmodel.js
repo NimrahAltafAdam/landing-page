@@ -3,30 +3,44 @@ const mongoose=require('mongoose');
 
 const studentSchema=new mongoose.Schema({
    
-    studentname:{
+    studname:{
         type:String,
         required:true,
         minlength:3
     },
-    grade:{
+    studemail:{
+        type:String,
+        minlength:5,
+        required:true
+    },
+    studpassword:{
+        type:String,
+        minlength:6,
+        required:true
+    },
+    studgrade:{
         type:String,
         required:true,
-        maxlength:15
+        minlength:2
     },
-    email:{
-        type:String,
-        minlength:2,
-        required:true
-    },
-    password:{
-        type:String,
-        minlength:2,
-        required:true
-    },
-    subjects:{
+    studsubjects:{
         type:Number,
         maxlength:2,
         required:true,
+    },
+    studattquiz:{
+        type:Number,
+        maxlength:5,
+        required:true,
+    },
+    studlastquizscore:{
+        type:Number,
+        maxlength:2,
+        
+    },
+    status:{
+        type:String,
+        minlength:2
     }
 }
 )

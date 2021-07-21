@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app=express();
-const port=process.env.PORT || 7786 ;
+const port=process.env.PORT || 7787 ;
 
 
 app.use(cors());
@@ -23,13 +23,12 @@ connection.once('open', () => {
 
 const studentsRouter = require('./routers/students');
 const teachersRouter=require('./routers/teachers')
-
+const usersRouter=require('./routers/users')
 
 
 app.use('/students',studentsRouter);
 app.use('/teachers',teachersRouter);
-
-
+app.use('/users',usersRouter);
 
 
 // app.use(function (req, res, next) {

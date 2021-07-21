@@ -3,24 +3,29 @@ const mongoose=require("mongoose");
 
 const teacherSchema= new mongoose.Schema({
 
-teachername:{
+teachname:{
     type:String,
     minlength:3,
     required:true,
 },
-temail:{
+teachemail:{
     type:String,
-    minlength:3,
+    minlength:5,
     required:true,
 },
-tpassword:{
+teachpassword:{
     type:String,
-    minlength:3,
+    minlength:6,
     required:true,
 },
-tsubjects:{
+teachsubjects:{
     type:Number,
-    minlength:3,
+    minlength:2,
+    required:true,
+},
+status:{
+    type:String,
+    minlength:2,
     required:true,
 }
 

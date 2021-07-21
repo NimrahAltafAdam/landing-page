@@ -87,14 +87,14 @@
       width: 210px;
       height: 180px;
       position: relative;
-      perspective: 1000px;
+      perspective: 1500px;
   }
   #carousel{
-      width: 100%;
+      width: 90%;
       height: 100%;
       position: absolute;
       transform-style: preserve-3d;
-      animation: rotation 20s infinite linear;
+      animation: rotation 25s infinite linear;
   }
   #carousel:hover{
       animation-play-state: paused;
@@ -106,7 +106,7 @@
       height: 160px;
       left: 10px;
       top: 10px;
-      background: rgb(131, 120, 120);
+      background: rgb(111, 168, 168);
       overflow: hidden;
       border: solid 5px rgb(17, 120, 146);
   }

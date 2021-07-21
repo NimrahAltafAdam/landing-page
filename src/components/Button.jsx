@@ -8,8 +8,8 @@ const SIZES = ["btn--medium", "btn--large"];
 
 export const Button = ({
     children,
-    type,
-    onClick,
+    // type,
+    // onClick,
     buttonStyle,
     buttonSize
 }) => {
@@ -18,11 +18,11 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
 
     return (
-        <Link to = "sign-up" classNmae = "btn-mobile">
+        <Link to = "/login" className = "btn-mobile">
             <button /* WILL AUTOMATICALLY DISPLAY THE THE BUTTON COMPONENTS LIKE GET STARTED ETC*/
             className = {`btn ${checkButtonStyle} ${checkButtonSize}`}
-            onClick = {onClick}
-            type = {type}
+            // onClick = {onClick}
+            // type = {type}
             >
                 {children}
             </button>
