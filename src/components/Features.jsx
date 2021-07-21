@@ -1,4 +1,4 @@
-import {Button} from "./Button";
+
 import "./Features.css";
 import video from "../videos/video-1.mp4";
 
@@ -10,25 +10,26 @@ function Features() {
       <h1>EDUCATION FROM HOME</h1>
       <p>What are you waiting for?</p>
       <div className = "hero-btns">
-        <Button 
-        className = "btns"
-        buttonStyle = "btn--outline"
-        buttonSize = "btn--large"
-        >
-          GET STARTED
-        </Button>
-
-        <Button 
-        className = "btns"
-        buttonStyle = "btn--primary"
-        buttonSize = "btn--large"
-        >
-          ABOUT US
-          <i className = "far fa-play-circle" />
-        </Button>
       </div>
     </div>
   )
 }
 
 export default Features;
+
+/*<Button 
+className = "btns"
+buttonStyle = "btn--outline"
+buttonSize = "btn--large"
+>
+  GET STARTED
+</Button> 
+
+<Button 
+className = "btns"
+buttonStyle = "btn--primary"
+buttonSize = "btn--large"
+>
+  ABOUT US
+  <i className = "far fa-play-circle" />
+</Button>*/

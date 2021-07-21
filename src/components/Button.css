@@ -1,42 +1,48 @@
-:root {
-  --primary: #fff;
-}
-
 .btn {
-  padding: 8px 20px;
-  border-radius: 2px;
-  outline:none;
-  border: none;
-  cursor: pointer;
-}
-
-.btn--primary {
-  background-color: var(--primary) ;
-  color: #242424;
-  border: 1px solid var(--primary);
-}
-
-.btn--outline {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-family: serif;
+  font-size: 20px;
+  font-weight: 100;
+  padding: 20px;
+  /*background-color: #0F9E94;*/
   background-color: transparent;
-  color: #fff;
-  padding: 8px 20px;
-  border: 1px solid var(--primary);
-  transition: all 0.3s ease-out;
+  border: solid #fff 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  left:1390px;
+  position:absolute;
+  top:18px;
+  z-index: 1;
 }
 
-.btn--medium {
-  padding: 8px 20px;
-  font-size: 20px;
-}
-
-.btn--large {
-  padding: 12px 26px;
-  font-size: 20px;
-}
-
-.btn--medium:hover,
-.btn--large:hover {
+.btn:hover {
   background: #fff;
   color: #242424;
   transition: all 0.3s ease-out;
+}
+
+.bg {
+  position: fixed; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg::before {    
+    content: "";
+    background-image: url(https://cdn4.vectorstock.com/i/1000x1000/31/58/alphabet-background-vector-553158.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.05;
 }

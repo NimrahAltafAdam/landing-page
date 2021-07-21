@@ -1,13 +1,13 @@
 .navbar {
   background: linear-gradient(90deg, #43cea2, #185a9d);
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  position: relative;
   top: 0;
-  z-index: 999;
+  z-index: 0;
 }
 
 .navbar-container {
